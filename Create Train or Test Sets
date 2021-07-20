@@ -1,0 +1,13 @@
+
+# 第一种
+# 随机获取测试集和训练集
+def split_train_test(data, test_ratio):
+    np.random.seed(42) #保证每次随机都是同一个seed，保证随机结果一致，数据集变动会导致数据随机结果变动
+    shuffled_indices = np.random.permutation(len(data))
+    test_set_size = int(len(data) * test_ratio)
+    test_indices = shuffled_indices[:test_set_size]
+    train_indices = shuffled_indices[test_set_size:]
+    return data.iloc[train_indices], data.iloc[test_indices]    
+    
+    
+# 第二种
