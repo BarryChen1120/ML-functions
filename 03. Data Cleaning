@@ -1,8 +1,16 @@
 
-# 处理文本分类属性
-# 注：
+# 处理文本分类属性 => 转化为数字
+# 缺点：算法会认为两个想进的值比两个离得较远的值更为相似一些
 # ordinalencoder类
 
 from sklearn.preprocessing import OrdinalEncoder
 ordinal_encoder = OrdinalEncoder()
 datasets_level_encode = ordinal_encoder.fit_transform(datasets[["level"]])
+
+
+# 独热编码，用于消除数值对算法的影响，OneHotEncoder
+
+from sklearn.preprocessing import OneHotEncoder
+level_encoder = OneHotEncoder()
+datasets_level_1hot = level_encoder.fit_transform(datasets[["level"]])
+datasets_level_1hot
