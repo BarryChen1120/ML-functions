@@ -6,4 +6,9 @@
 corr_matrix = datasets.corr()
 corr_matrix["ciiquantity"].sort_values(ascending=False) # 输出ciiquantity属性和其他属性的相关性
 
+
 # 方法二
+# 散点图，scatter_matrix函数
+
+from pandas.plotting import scatter_matrix
+scatter_matrix(datasets,figsize = (20,15))
