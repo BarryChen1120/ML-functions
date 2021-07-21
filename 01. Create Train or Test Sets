@@ -1,6 +1,6 @@
 
 # 第一种
-# 随机获取测试集和训练集
+# 随机获取测试集和训练集01
 def split_train_test(data, test_ratio):
     np.random.seed(42) #保证每次随机都是同一个seed，保证随机结果一致，数据集变动会导致数据随机结果变动
     shuffled_indices = np.random.permutation(len(data))
@@ -10,6 +10,15 @@ def split_train_test(data, test_ratio):
     return data.iloc[train_indices], data.iloc[test_indices]    
     
     
-# 第二种
+# 随机获取测试集和训练集02
 # sklearn 自带方法train_test_split
 from sklearn.model_selection import train_test_split
+
+# 第二种
+# 根据某一特征分层抽样
+from sklearn.model_selection import StratifiedShuffleSplit
+
+ss=StratifiedShuffleSplit(n_splits=1,test_size=0.25,random_state=42)#分成1组，测试集比例为0.25，训练比例是0.75，seed种子是42
+for train_index, test_index in ss.split(datasets,datasets["level"]): # datasets为数据集，level为数据集中的某一特征("A","B","C")
+   strat_train_set = datasets.loc[train_index] # 训练集对应的值,train_index为数据集索引值
+   strat_test_set = datasets.loc[test_index] # 类别集对应的值,test_index为数据集索引值
