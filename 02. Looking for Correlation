@@ -1,1 +1,9 @@
 
+# 方法一
+# dataframe.corr() 计算没对属性之间的标准相关系数（即皮尔逊r）
+# 注：该系数仅测量线性相关性，会遗漏非线性相关性
+
+corr_matrix = datasets.corr()
+corr_matrix["ciiquantity"].sort_values(ascending=False) # 输出ciiquantity属性和其他属性的相关性
+
+# 方法二
