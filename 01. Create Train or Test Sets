@@ -11,4 +11,5 @@ def split_train_test(data, test_ratio):
     
     
 # 第二种
-#
+# sklearn 自带方法train_test_split
+from sklearn.model_selection import train_test_split
