@@ -1,1 +1,8 @@
 
+# 处理文本分类属性
+# 注：
+# ordinalencoder类
+
+from sklearn.preprocessing import OrdinalEncoder
+ordinal_encoder = OrdinalEncoder()
+datasets_level_encode = ordinal_encoder.fit_transform(datasets[["level"]])
