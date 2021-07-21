@@ -22,3 +22,4 @@ ss=StratifiedShuffleSplit(n_splits=1,test_size=0.25,random_state=42)#分成1组�
 for train_index, test_index in ss.split(datasets,datasets["level"]): # datasets为数据集，level为数据集中的某一特征("A","B","C")
    strat_train_set = datasets.loc[train_index] # 训练集对应的值,train_index为数据集索引值
    strat_test_set = datasets.loc[test_index] # 类别集对应的值,test_index为数据集索引值
+
