@@ -1,4 +1,5 @@
 
+# 方法一
 # 处理文本分类属性 => 转化为数字
 # 缺点：算法会认为两个想进的值比两个离得较远的值更为相似一些
 # ordinalencoder类
@@ -8,9 +9,11 @@ ordinal_encoder = OrdinalEncoder()
 datasets_level_encode = ordinal_encoder.fit_transform(datasets[["level"]])
 
 
+# 方法二
 # 独热编码，用于消除数值对算法的影响，OneHotEncoder
-
+# 输出为SciPy稀疏矩阵
+# 缺点：若类别属性具有大量可能的类别，那么会导致大量的输入特征，会减慢训练并降低性能
 from sklearn.preprocessing import OneHotEncoder
 level_encoder = OneHotEncoder()
 datasets_level_1hot = level_encoder.fit_transform(datasets[["level"]])
-datasets_level_1hot
+datasets_level_1hot.toarray() # toarray将SciPy稀疏矩阵转化为numpy数组
