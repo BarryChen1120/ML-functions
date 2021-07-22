@@ -24,7 +24,7 @@ scaler.fit_transform(datasets) # datasets 数据集
 
 
 
-# 转换流水线
+# 转换流水线????报错待修复
 
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
