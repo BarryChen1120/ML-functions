@@ -1,8 +1,8 @@
+# 处理文本分类属性 => 转化为数字
 
 # 方法一
-# 处理文本分类属性 => 转化为数字
-# 缺点：算法会认为两个想进的值比两个离得较远的值更为相似一些
 # ordinalencoder类
+# 缺点：算法会认为两个想进的值比两个离得较远的值更为相似一些
 
 from sklearn.preprocessing import OrdinalEncoder
 ordinal_encoder = OrdinalEncoder()
