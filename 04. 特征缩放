@@ -24,9 +24,10 @@ scaler.fit_transform(datasets) # datasets 数据集
 
 
 
-# 转换流水线????报错待修复
+# 转换流水线
+# 可把需要的过滤过程放入到 pipeline中
 
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-num_pipeline = Pipeline([('imputer', SimpleImputer(strategy="median")),('attribs_adder', CombinedAttributesAdder()),('std_scaler', StandardScaler()),])
+num_pipeline = Pipeline([('imputer', SimpleImputer(strategy="median")),('std_scaler', StandardScaler()),])
 num_pipeline.fit_transform(datasets) # datasets 数据集
