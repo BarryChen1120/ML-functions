@@ -15,4 +15,4 @@ from sklearn.tree import DecisionTreeRegressor
 
 tree_reg = DecisionTreeRegressor()
 tree_reg.fit(datasets_prepared, datasets_labels) # 训练模型
-tree_reg.predict(some_datasets_prepared) # 训练后的模型进行数据预测
+predictions = tree_reg.predict(some_datasets_prepared) # 训练后的模型进行数据预测
