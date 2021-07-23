@@ -1,0 +1,22 @@
+
+# 回归模型效果评估
+# 1. MSE （Mean Squared Error），均方误差
+# 公式：真实值-预测值，然后平方之后求和平均（即线性回归的损失函数）
+from sklearn.metrics import mean_squared_error
+
+# 2. RMSE（Root Mean Squard Error），均方根误差 
+# 公式：MSE开个根号
+# 优点：相比MSE有更好的数据解释，保证模型误差结果与实际结果是同一数据量级
+
+
+# 3. MAE，平均绝对误差
+
+from sklearn.metrics import mean_absolute_error
+
+
+
+# 4. R Squared,R方
+# 衡量算法的准确率，0-1 数值越高越准确
+
+from sklearn.metrics import r2_score
+
