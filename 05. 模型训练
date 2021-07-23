@@ -1,9 +1,18 @@
 
-# 回归模型
+# 线性回归模型
 
 from sklearn.linear_model import LinearRegression
 
 lin_reg = LinearRegression()
-lin_reg.fit(datasets_prepared, datasets_labels)
+lin_reg.fit(datasets_prepared, datasets_labels) # 训练模型
+lin_reg.predict(some_datasets_prepared) # 训练后的模型进行数据预测
 
 
+
+# 决策树回归模型
+
+from sklearn.tree import DecisionTreeRegressor
+
+tree_reg = DecisionTreeRegressor()
+tree_reg.fit(datasets_prepared, datasets_labels) # 训练模型
+tree_reg.predict(some_datasets_prepared) # 训练后的模型进行数据预测
