@@ -1,7 +1,10 @@
 
 import joblib
 
-# 将训练的模型保存到磁盘(value=模型名)，默认当前文件夹下
-joblib.dump(my_model, "my_model.pkl") # DIFF
-#...
-my_model_loaded = joblib.load("my_model.pkl") # DIFF
+# 将训练的模型保存到磁盘(value=模型名，filename=文件夹和文件名)，默认当前文件夹下
+joblib.dump(value=my_model, filename="my_model.pkl")
+# 模型调取
+my_model_loaded = joblib.load("my_model.pkl") 
+
+
+
