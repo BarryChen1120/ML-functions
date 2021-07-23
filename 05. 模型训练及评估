@@ -8,5 +8,7 @@ lin_reg.fit(datasets_prepared, datasets_labels)
 
 
 
-# 模型效果
+# 回归模型效果评估
+# 1. MSE （Mean Squared Error），均方误差：真实值-预测值，然后平方之后求和平均
 
+# 2. RMSE（Root Mean Squard Error），均方根误差 
