@@ -1,5 +1,4 @@
 
-# 回归模型效果评估
 # 1. MSE （Mean Squared Error），均方误差
 # 公式：真实值-预测值，然后平方之后求和平均（即线性回归的损失函数）
 from sklearn.metrics import mean_squared_error
@@ -14,9 +13,13 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 
 
-
 # 4. R Squared,R方
 # 衡量算法的准确率，0-1 数值越高越准确
 
 from sklearn.metrics import r2_score
+
+# 5. 交叉验证（K-折交叉验证）
+from sklearn.model_selection import cross_val_score
+
+
 
