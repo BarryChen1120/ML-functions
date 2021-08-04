@@ -3,8 +3,13 @@
 # dataframe.corr() 计算没对属性之间的标准相关系数（即皮尔逊r）
 # 注：该系数仅测量线性相关性，会遗漏非线性相关性
 
-corr_matrix = datasets.corr()
+# pearson：Pearson相关系数来衡量两个数据集合是否在一条线上面，即针对线性数据的相关系数计算，针对非线性数据便会有误差。
+# kendall：用于反映分类变量相关性的指标，即针对无序序列的相关系数，非正太分布的数据
+# spearman：非线性的，非正太分布的数据的相关系数
+
+corr_matrix = datasets.corr() # method="pearson"/"kendall"/"spearman" 方法参数可选三种
 corr_matrix["ciiquantity"].sort_values(ascending=False) # 输出ciiquantity属性和其他属性的相关性
+
 
 
 # 方法二
