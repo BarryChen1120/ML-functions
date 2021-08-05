@@ -17,9 +17,14 @@ from sklearn.metrics import mean_absolute_error
 # 衡量算法的准确率，0-1 数值越高越准确
 
 from sklearn.metrics import r2_score
+# 取值范围[-无穷:1]；score=1意味着样本中预测值和真实值完全相等;score=0意味着样本的每项预测值都等于均值；score<0意味着训练模型反而不如直接去均值效果好
+r2_score(datasets_test_labels,xx_predictions) # datasets_test_labels测试集结果；xx_predictions预测值结果
+
+
 
 # 5. 交叉验证（K-折交叉验证）
 from sklearn.model_selection import cross_val_score
+
 
 
 
