@@ -6,10 +6,15 @@ from sklearn.tree import DecisionTreeRegressor # 决策树回归模型
 from sklearn.linear_model import LogisticRegression # 逻辑回归模型
 from sklearn.ensemble import RandomForestRegressor  # 随机森林回归模型
 
-# 线性回归模型
+# 线性回归模型 
+# 公式 Y = W0+W1X1+W2X2...+WnXn
 lin_reg = LinearRegression()
 lin_reg.fit(datasets_train_prepared, datasets_train_labels) # 训练模型
 lin_predictions = lin_reg.predict(datasets_test_prepared) # 训练后的模型进行数据预测
+lin_reg.intercept_ # intercept_代表W0
+lin_reg.coef_ # ，coef_代表W1至Wn
+
+
 
 # 决策树回归模型
 tree_reg = DecisionTreeRegressor()
